@@ -146,8 +146,8 @@ function fetchFileData(fileUrl, sheetIndex) { //fetch the data from the spreadsh
 
             const geneMap = new Map(); //container for the genes
             sheetData.forEach(e => {
-                const gene = e.proteins; //!todo protiens to gene and C->c
-                const site = e.sites;
+                const gene = e.Genes; //!todo protiens to gene and C->c
+                const site = e.Sites;
                 const code = e.Code.split("+")[0]
                 const frequency = e.Frequency
 
@@ -166,7 +166,7 @@ function fetchFileData(fileUrl, sheetIndex) { //fetch the data from the spreadsh
         })
         .catch(err => {
             console.error("Error Found !!!", err);
-            alert("Error found :", err, " Check your input file with names (genes,sites,code,Frequency) also match the case")
+            alert("Error found :", err, " Check your input file with names (Genes,Sites,Code,Frequency) also match the case")
         })
 }
 //handle the creation of the chart
