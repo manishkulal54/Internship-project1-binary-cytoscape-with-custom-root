@@ -148,7 +148,7 @@ function fetchFileData(fileUrl, sheetIndex) { //fetch the data from the spreadsh
             sheetData.forEach(e => {
                 const gene = e.proteins; //!todo protiens to gene and C->c
                 const site = e.sites;
-                const code = e.Code.replace("+", "")
+                const code = e.Code.split("+")[0]
                 const frequency = e.Frequency
 
                 if (!geneMap.has(gene)) {
